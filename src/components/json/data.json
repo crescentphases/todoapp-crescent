@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "value": "Go to work",
+    "isDone" : false
+  },
+  {
+    "id": 1,
+    "value": "Do something",
+    "isDone" : false
+  },
+   {
+    "id": 2,
+    "value": "Wake up",
+    "isDone" : false
+  },
+   {
+    "id": 3,
+    "value": "What",
+    "isDone" : false
+  },
+   {
+    "id": 4,
+    "value": "Done",
+    "isDone" : true
+  }
+]

@@ -101,11 +101,11 @@ body {
         border: 3px solid $secondBorder-color;
       }
 
-      &:last-of-type {
-        &::after {
-          border: none;
-        }
-      }
+      //&:last-of-type {
+      //  &::after {
+      //    border: none;
+      //  }
+      //}
 
       &__icon {
         height: 32px;
@@ -113,19 +113,29 @@ body {
         border: 2px solid $mainBorder-color;
         background-color: transparent;
         border-radius: 50px;
-
+        cursor: pointer;
         &:hover {
           background: linear-gradient(111.35deg, #E600FA 10.12%, rgba(82, 97, 234, 0) 82.22%);
-          cursor: pointer;
+
         }
+
         @include glowing-effect(
                         linear-gradient(45deg, #77228a, #d026c7, #840f94, #8b25a8, #500093, #bf00ff, #bf43f3, #ff00c8, #9c5cc7),
                         10px
         );
+        &-done {
+          background: linear-gradient(111.35deg, #721680 30%, rgba(82, 97, 234, 0) 100.22%);
+          cursor: crosshair;
+          border: none;
+        }
       }
 
       &__text {
-
+        &-done {
+          color: $secondText-color;
+          text-decoration: line-through;
+          cursor: not-allowed;
+        }
       }
     }
   }
