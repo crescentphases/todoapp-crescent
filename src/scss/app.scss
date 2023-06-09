@@ -72,9 +72,61 @@ body {
 
       @include glowing-effect(
                       linear-gradient(45deg, #77228a, #d026c7, #840f94, #8b25a8, #500093, #bf00ff, #bf43f3, #ff00c8, #9c5cc7),
-                      30px
+                      10px
       );
     }
   }
 
+  .to__doBlock {
+    width: 666px;
+
+    height: fit-content;
+    background-color: $base-color;
+    margin: 0 auto;
+    &-block {
+
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 18px 20px;
+
+      gap: 30px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 84px;
+        left: 84px;
+        bottom: 0;
+        border: 3px solid $secondBorder-color;
+      }
+
+      &:last-of-type {
+        &::after {
+          border: none;
+        }
+      }
+
+      &__icon {
+        height: 32px;
+        width: 32px;
+        border: 2px solid $mainBorder-color;
+        background-color: transparent;
+        border-radius: 50px;
+
+        &:hover {
+          background: linear-gradient(111.35deg, #E600FA 10.12%, rgba(82, 97, 234, 0) 82.22%);
+          cursor: pointer;
+        }
+        @include glowing-effect(
+                        linear-gradient(45deg, #77228a, #d026c7, #840f94, #8b25a8, #500093, #bf00ff, #bf43f3, #ff00c8, #9c5cc7),
+                        10px
+        );
+      }
+
+      &__text {
+
+      }
+    }
+  }
 }
