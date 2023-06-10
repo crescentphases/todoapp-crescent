@@ -35,7 +35,7 @@ function App() {
       {todos.map((item) => <ToDoBlock key={item.id} {...item}/>)}
       <div className="fill__block-info">
         <div className="fill__block-info__itemsNumber">
-          {todos.length}
+          {todos.length + 'Items'}
         </div>
         <button onClick={() => setTodos([])} className="fill__block-info__button">
             Clear Complete
