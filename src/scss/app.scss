@@ -29,6 +29,7 @@ body {
     &__logo {
       font-weight: 700;
       font-size: 72px;
+
     }
 
     .credentials {
@@ -75,6 +76,28 @@ body {
                       10px
       );
     }
+    &-info {
+      width: 666px;
+      height: 60px;
+      background-color: $base-color;
+      margin: 0 auto;
+      border: 2px solid #AD02FE;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      &__itemsNumber {
+
+      }
+      &__button {
+       background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:hover {
+         color: $secondText-color;
+        }
+      }
+    }
+
   }
 
   .to__doBlock {
@@ -89,23 +112,11 @@ body {
       align-items: center;
       position: relative;
       padding: 18px 20px;
+      border: 3px solid $secondBorder-color;
 
       gap: 30px;
 
-      &::after {
-        content: '';
-        position: absolute;
-        right: 84px;
-        left: 84px;
-        bottom: 0;
-        border: 3px solid $secondBorder-color;
-      }
 
-      //&:last-of-type {
-      //  &::after {
-      //    border: none;
-      //  }
-      //}
 
       &__icon {
         height: 32px;

@@ -23,15 +23,24 @@ function App() {
     console.log(todos)
   };
 
+
   return (
   <div>
     <div className="container">
         <Header/>
       <div className="fill__block">
         <input type="text" value={inputValue} onChange={handleChange} id="todo-text" placeholder="Create a new todo..." />
-        <button onClick={addNewToDo} className="fill__block-button">GO</button>
+        <button onClick={addNewToDo} className="fill__block-button">ADD</button>
       </div>
-      {todos.map(item => <ToDoBlock key={item.id} {...item}/>)}
+      {todos.map((item) => <ToDoBlock key={item.id} {...item}/>)}
+      <div className="fill__block-info">
+        <div className="fill__block-info__itemsNumber">
+          {todos.length}
+        </div>
+        <button onClick={() => setTodos([])} className="fill__block-info__button">
+            Clear Complete
+        </button>
+      </div>
     </div>
   </div>
   );
